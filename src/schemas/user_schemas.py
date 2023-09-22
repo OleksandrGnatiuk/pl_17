@@ -18,7 +18,7 @@ class UserResponse(BaseModel):
     role: Role = "user"
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class UserUpdate(BaseModel):
@@ -30,7 +30,7 @@ class UserBlackList(BaseModel):
     banned: Optional[bool] = False
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class UserBlacklistResponse(BaseModel):
@@ -41,4 +41,4 @@ class UserBlacklistResponse(BaseModel):
     banned: Optional[bool] = False
 
     class Config:
-        orm_mode = True
+        from_attributes = True

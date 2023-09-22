@@ -14,7 +14,6 @@ async def get_user_by_email(email: str, db: Session) -> User | None:
     :param email: str: Pass the email address of the user to be retrieved
     :param db: Session: Pass in a database session
     :return: A user object or none
-    :doc-author: Trelent
     """
     return db.query(User).filter(User.email == email).first()
 
